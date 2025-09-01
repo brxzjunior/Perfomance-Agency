@@ -1,8 +1,9 @@
 import { useState, useEffect } from "react";
-import { Button } from "./ui/button";
+import { Menu, X } from "lucide-react";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -14,52 +15,91 @@ const Navbar = () => {
 
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
-    element?.scrollIntoView({ behavior: "smooth" });
+    if (element) {
+      // Calcula o offset da navbar
+      const navbarHeight = 80; // Altura aproximada da navbar
+      const elementPosition = element.offsetTop - navbarHeight;
+      
+      window.scrollTo({
+        top: elementPosition,
+        behavior: "smooth"
+      });
+    }
+    setIsMobileMenuOpen(false);
   };
 
   return (
-    <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-      isScrolled ? "bg-background/95 backdrop-blur-md shadow-lg border-b border-border/50" : "bg-transparent"
-    }`}>
-      <div className="container mx-auto px-4 py-4 flex justify-between items-center">
-        {/* Logo */}
-        <div 
-          className="text-2xl font-bold text-glow cursor-pointer"
-          onClick={() => scrollToSection("hero")}
-        >
-          Performance Agency
+    <>
+      <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${
+        isScrolled ? "bg-background/95 backdrop-blur-md shadow-lg border-b border-border/50" : "bg-transparent"
+      }`}>
+        <div className="container mx-auto px-4 py-3 md:py-4 flex justify-between items-center">
+          {/* Logo */}
+          <div 
+            className="cursor-pointer"
+            onClick={() => scrollToSection("hero")}
+          >
+            <img 
+              src="/src/assets/logo.png"
+              alt="Performance Agency Logo"
+              className="h-10 md:h-12 w-auto transition-all duration-300 hover:scale-105"
+            />
+          </div>
+
+          {/* Desktop Auth Buttons */}
+          <div className="hidden md:flex space-x-4">
+            <button className="px-4 py-2 text-ice hover:text-primary transition-colors rounded-lg hover:bg-secondary/20">
+              Login
+            </button>
+            <button className="btn-neon px-6 py-2 rounded-lg">
+              Signup
+            </button>
+          </div>
+
+          {/* Mobile Menu Button */}
+          <button 
+            className="md:hidden text-ice hover:text-primary transition-colors p-2"
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          >
+            {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
         </div>
 
-        {/* Navigation Links - Hidden on mobile */}
-        <div className="hidden md:flex space-x-8">
-          <button onClick={() => scrollToSection("sobre")} className="text-ice hover:text-primary transition-colors">
-            Sobre
-          </button>
-          <button onClick={() => scrollToSection("como-funciona")} className="text-ice hover:text-primary transition-colors">
-            Como Funciona
-          </button>
-          <button onClick={() => scrollToSection("depoimentos")} className="text-ice hover:text-primary transition-colors">
-            Depoimentos
-          </button>
-          <button onClick={() => scrollToSection("precos")} className="text-ice hover:text-primary transition-colors">
-            Preços
-          </button>
-          <button onClick={() => scrollToSection("team")} className="text-ice hover:text-primary transition-colors">
-            Equipe
-          </button>
-        </div>
+        {/* Mobile Menu */}
+        <div className={`md:hidden transition-all duration-300 overflow-hidden ${
+          isMobileMenuOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
+        } bg-background/95 backdrop-blur-md border-t border-border/50`}>
+          <div className="container mx-auto px-4 py-4 space-y-4">
+            <button 
+              onClick={() => scrollToSection("como-funciona")} 
+              className="block w-full text-left text-ice hover:text-primary transition-colors py-2"
+            >
+              Como Funciona
+            </button>
 
-        {/* Auth Buttons */}
-        <div className="flex space-x-4">
-          <Button variant="ghost" className="text-ice hover:text-primary">
-            Login
-          </Button>
-          <Button className="btn-neon">
-            Signup
-          </Button>
+            <button 
+              onClick={() => scrollToSection("precos")} 
+              className="block w-full text-left text-ice hover:text-primary transition-colors py-2"
+            >
+              Preços
+            </button>
+            
+            {/* Mobile Auth Buttons */}
+            <div className="flex flex-col space-y-3 pt-4 border-t border-border/30">
+              <button className="w-full text-left px-4 py-2 text-ice hover:text-primary transition-colors rounded-lg hover:bg-secondary/20">
+                Login
+              </button>
+              <button className="btn-neon w-full text-left px-4 py-2 rounded-lg">
+                Signup
+              </button>
+            </div>
+          </div>
         </div>
-      </div>
-    </nav>
+      </nav>
+
+      {/* Spacer para evitar sobreposição do conteúdo */}
+      <div className="h-16 md:h-20"></div>
+    </>
   );
 };
 

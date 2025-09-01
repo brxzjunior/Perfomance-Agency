@@ -1,33 +1,38 @@
 import { Linkedin, Mail } from "lucide-react";
-import teamMember1 from "@/assets/team-member-1.jpg";
-import teamMember2 from "@/assets/team-member-2.jpg";
-import teamMember3 from "@/assets/team-member-3.jpg";
 
 const Team = () => {
   const teamMembers = [
     {
-      name: "Ana Carolina Silva",
-      role: "CEO & Estrategista Digital",
-      image: teamMember1,
-      description: "15+ anos de experiência em marketing digital. Especialista em estratégias de crescimento e ROI. Formada em Marketing pela USP com MBA em Digital Business.",
+      name: "Erick Raphael",
+      role: "Marketing Analyst",
+      image: "https://0.gravatar.com/avatar/7d390d9e32b7fe3474183d3fb8ecb1b4c2811cb99429e24b1874551aef20a10f?size=256&d=initials",
+      description: "Experiência em marketing digital. Especialista em estratégias de crescimento e ROI.",
       linkedin: "#",
-      email: "ana@performanceagency.com.br"
+      email: "erick@performanceagency.com.br"
     },
     {
-      name: "Rafael Mendes", 
-      role: "Creative Director",
-      image: teamMember2,
-      description: "Designer premiado com expertise em branding e UX/UI. Responsável por criar identidades visuais marcantes que convertem. 10+ anos criando campanhas de sucesso.",
+      name: "Williamis Oliveira",
+      role: "Backend Developer",
+      image: "https://avatars.githubusercontent.com/u/67030481?v=4",
+      description: "Experiência em desenvolvimento backend com foco em escalabilidade e performance.",
       linkedin: "#",
-      email: "rafael@performanceagency.com.br"
+      email: "will@performanceagency.com.br"
     },
     {
-      name: "Marina Costa",
-      role: "Head de Performance",
-      image: teamMember3,
-      description: "Especialista certificada em Google Ads e Facebook Ads. Gerencia investimentos de mais de R$ 2M/mês em mídia paga com foco em performance e resultados mensuráveis.",
+      name: "Braz Junior",
+      role: "Front-end Developer",
+      image: "https://avatars.githubusercontent.com/u/90149109?v=4",
+      description: "Experiência em desenvolvimento front-end com foco em performance e usabilidade.",
       linkedin: "#",
-      email: "marina@performanceagency.com.br"
+      email: "brazjunior@performanceagency.com.br"
+    },
+    {
+      name: "Jhonatan Almeida",
+      role: "Creative Marketing",
+      image: "https://2.gravatar.com/avatar/437dadf011284df43d90e2528a45bd211d51b51ec0414ef8ea094d021281fe08?size=256&d=initials",
+      description: "Experiência em marketing criativo com foco em campanhas inovadoras e engajamento de público.",
+      linkedin: "#",
+      email: "jhonalmeida@performanceagency.com.br"
     }
   ];
 
@@ -47,12 +52,12 @@ const Team = () => {
         </div>
 
         {/* Team Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-8 max-w-7xl mx-auto">
           {teamMembers.map((member, index) => (
-            <div key={index} className="card-team group">
+            <div key={index} className="relative bg-card/80 backdrop-blur-sm rounded-2xl p-6 border border-border/50 hover:border-primary/50 transition-all duration-500 hover:-translate-y-2 group h-full flex flex-col">
               {/* Photo */}
-              <div className="relative mb-6">
-                <div className="w-32 h-32 mx-auto rounded-full overflow-hidden border-4 border-primary/30 group-hover:border-primary transition-all duration-500">
+              <div className="relative mb-6 flex-shrink-0">
+                <div className="w-32 h-32 mx-auto rounded-full overflow-hidden border-4 border-primary/30 group-hover:border-primary transition-all duration-500 relative">
                   <img
                     src={member.image}
                     alt={member.name}
@@ -65,14 +70,16 @@ const Team = () => {
               </div>
 
               {/* Member Info */}
-              <div className="text-center mb-6">
-                <h3 className="text-xl font-bold text-ice mb-2">{member.name}</h3>
-                <p className="text-primary font-semibold mb-4">{member.role}</p>
-                <p className="text-muted-foreground text-sm leading-relaxed">{member.description}</p>
+              <div className="text-center mb-6 flex-grow flex flex-col justify-between">
+                <div>
+                  <h3 className="text-xl font-bold text-ice mb-2">{member.name}</h3>
+                  <p className="text-primary font-semibold mb-4">{member.role}</p>
+                  <p className="text-muted-foreground text-sm leading-relaxed">{member.description}</p>
+                </div>
               </div>
 
               {/* Social Links */}
-              <div className="flex justify-center space-x-4">
+              <div className="flex justify-center space-x-4 mt-auto">
                 <a 
                   href={member.linkedin}
                   className="w-10 h-10 bg-secondary/50 rounded-full flex items-center justify-center hover:bg-primary hover:scale-110 transition-all duration-300 group/link"
@@ -88,7 +95,7 @@ const Team = () => {
               </div>
 
               {/* Hover Overlay */}
-              <div className="absolute inset-0 bg-gradient-to-t from-primary/10 to-transparent rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
+              <div className="absolute inset-0 bg-gradient-to-t from-primary/10 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
             </div>
           ))}
         </div>
@@ -96,19 +103,19 @@ const Team = () => {
         {/* Team Stats */}
         <div className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
           <div className="text-center">
-            <div className="text-3xl font-bold text-glow mb-2">50+</div>
+            <div className="text-3xl font-bold text-glow mb-2">5+</div>
             <div className="text-muted-foreground text-sm">Anos de Experiência Combinada</div>
           </div>
           <div className="text-center">
-            <div className="text-3xl font-bold text-glow mb-2">100+</div>
+            <div className="text-3xl font-bold text-glow mb-2">10+</div>
             <div className="text-muted-foreground text-sm">Certificações Profissionais</div>
           </div>
           <div className="text-center">
-            <div className="text-3xl font-bold text-glow mb-2">500+</div>
+            <div className="text-3xl font-bold text-glow mb-2">20+</div>
             <div className="text-muted-foreground text-sm">Projetos Entregues</div>
           </div>
           <div className="text-center">
-            <div className="text-3xl font-bold text-glow mb-2">24/7</div>
+            <div className="text-3xl font-bold text-glow mb-2">Rápido</div>
             <div className="text-muted-foreground text-sm">Suporte Dedicado</div>
           </div>
         </div>

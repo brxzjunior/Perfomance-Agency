@@ -24,8 +24,8 @@ const Hero = () => {
       <div className="container mx-auto px-4 text-center relative z-10">
         {/* Main Heading */}
         <h1 className="text-5xl md:text-7xl font-bold mb-6 animate-fade-in">
-          <span className="text-ice">Transforme Sua </span>
-          <span className="text-glow animate-glow">Performance Digital</span>
+          <span className="text-ice">Aumente as conversões no seu </span>
+          <span className="text-glow animate-glow"> negócio</span>
         </h1>
 
         {/* Subtitle */}
@@ -57,7 +57,7 @@ const Hero = () => {
         {/* Stats */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
           <div className="text-center">
-            <div className="text-3xl md:text-4xl font-bold text-glow mb-2">500+</div>
+            <div className="text-3xl md:text-4xl font-bold text-glow mb-2">20+</div>
             <div className="text-muted-foreground">Clientes Satisfeitos</div>
           </div>
           <div className="text-center">
@@ -65,7 +65,7 @@ const Hero = () => {
             <div className="text-muted-foreground">Taxa de Sucesso</div>
           </div>
           <div className="text-center">
-            <div className="text-3xl md:text-4xl font-bold text-glow mb-2">5 Anos</div>
+            <div className="text-3xl md:text-4xl font-bold text-glow mb-2">2 Anos</div>
             <div className="text-muted-foreground">No Mercado</div>
           </div>
         </div>

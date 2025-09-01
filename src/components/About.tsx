@@ -31,10 +31,10 @@ const About = () => {
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
             <span className="text-ice">Sobre a </span>
-            <span className="text-glow">Performance Agency</span>
+            <span className="text-glow">Performance Digital</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Há mais de 5 anos no mercado, somos pioneiros em transformar negócios através de 
+            Há mais de 1 ano no mercado, somos pioneiros em transformar negócios através de 
             estratégias de marketing digital inovadoras e orientadas por resultados.
           </p>
         </div>
@@ -70,11 +70,11 @@ const About = () => {
         {/* Stats Section */}
         <div className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-8">
           <div className="text-center">
-            <div className="text-4xl font-bold text-glow mb-2">500M+</div>
+            <div className="text-4xl font-bold text-glow mb-2">10M+</div>
             <div className="text-muted-foreground">Impressões Geradas</div>
           </div>
           <div className="text-center">
-            <div className="text-4xl font-bold text-glow mb-2">15M+</div>
+            <div className="text-4xl font-bold text-glow mb-2">100K+</div>
             <div className="text-muted-foreground">Leads Qualificados</div>
           </div>
           <div className="text-center">
@@ -82,7 +82,7 @@ const About = () => {
             <div className="text-muted-foreground">ROI Médio</div>
           </div>
           <div className="text-center">
-            <div className="text-4xl font-bold text-glow mb-2">24/7</div>
+            <div className="text-4xl font-bold text-glow mb-2">Rápido</div>
             <div className="text-muted-foreground">Suporte Dedicado</div>
           </div>
         </div>

@@ -3,46 +3,25 @@ import { Star } from "lucide-react";
 const Testimonials = () => {
   const testimonials = [
     {
-      name: "Maria Silva",
-      role: "CEO, TechStart",
-      image: "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=150&h=150&fit=crop&crop=face",
+      name: "Paraná Performance",
+      role: "Paraná, CEO",
+      image: "https://i.ibb.co/DDbnHYz7/Parana-Performance.jpg",
       rating: 5,
-      text: "A Performance Agency transformou completamente nossa presença digital. Em 6 meses, triplicamos nosso faturamento online. Equipe excepcional!"
+      text: "A gente tinha dificuldade em conseguir clientes novos e qualificados. Depois da otimização no Google Meu Negócio, começamos a aparecer com mais destaque para quem realmente busca por oficina mecânica em Santarém. Hoje temos muito mais visibilidade, novos clientes chegando e um reconhecimento muito maior online."
     },
     {
-      name: "Carlos Santos",
-      role: "Diretor, EcoLoja",
-      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face",
+      name: "FreeCar AutoCenter",
+      role: "Paraná, CEO",
+      image: "https://i.ibb.co/FqJZx3s1/FreeCar.jpg",
       rating: 5,
-      text: "Resultados impressionantes! Nossa loja virtual teve um crescimento de 400% nas vendas. O ROI superou todas as expectativas."
+      text: "Antes da Performance Digital, tínhamos dificuldades em aparecer no Google e quase não recebíamos contatos novos. Depois do trabalho de otimização, nossa oficina passou a se destacar nas buscas, e hoje já estamos gerando leads consistentes toda semana. O resultado superou nossas expectativas!"
     },
     {
-      name: "Ana Costa",
-      role: "Fundadora, BeautyPro",
-      image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face",
+      name: "Salão Deus é Mestre",
+      role: "Delzanita, CEO",
+      image: "https://i.ibb.co/j94QTZff/salao.jpg",
       rating: 5,
-      text: "Profissionais altamente qualificados que realmente entendem do mercado. Nossas campanhas geram leads qualificados diariamente."
-    },
-    {
-      name: "João Oliveira",
-      role: "Gerente, AutoPeças Plus",
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face",
-      rating: 5,
-      text: "O melhor investimento que fizemos! Site novo, campanhas otimizadas e suporte 24/7. Recomendo para qualquer empresa que quer crescer."
-    },
-    {
-      name: "Patricia Lima",
-      role: "Proprietária, Café Gourmet",
-      image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=150&h=150&fit=crop&crop=face",
-      rating: 5,
-      text: "Desde que começamos a trabalhar juntos, nossa cafeteria se tornou referência na cidade. O marketing digital realmente funciona!"
-    },
-    {
-      name: "Roberto Ferreira",
-      role: "Sócio, Construtora Prime",
-      image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&h=150&fit=crop&crop=face",
-      rating: 5,
-      text: "Estratégias inovadoras que trouxeram resultados concretos. Nossos projetos imobiliários vendem muito mais rápido agora."
+      text: "Antes eu tinha dificuldade de atrair clientes pelo Google, quase ninguém encontrava meu salão. Depois da otimização, comecei a aparecer para quem realmente procura por salão de beleza na região. Hoje consigo mais agendamentos e clientes chegando direto pelo perfil. Foi a melhor decisão que tomei para o meu negócio."
     }
   ];
 
@@ -120,7 +99,7 @@ const Testimonials = () => {
               <div className="text-muted-foreground text-sm">Satisfação</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-glow mb-2">500+</div>
+              <div className="text-3xl font-bold text-glow mb-2">20+</div>
               <div className="text-muted-foreground text-sm">Clientes Ativos</div>
             </div>
             <div className="text-center">
