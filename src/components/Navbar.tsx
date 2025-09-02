@@ -96,9 +96,6 @@ const Navbar = () => {
           </div>
         </div>
       </nav>
-
-      {/* Spacer para evitar sobreposição do conteúdo */}
-      <div className="h-16 md:h-20"></div>
     </>
   );
 };

@@ -1,6 +1,5 @@
 import { ArrowDown } from "lucide-react";
-import { Button } from "./ui/button";
-import heroBg from "@/assets/hero-bg.jpg";
+import heroBg from "@/assets/hero-marketing.mov";
 
 const Hero = () => {
   const scrollToPlanos = () => {
@@ -9,18 +8,23 @@ const Hero = () => {
   };
 
   return (
-    <section 
-      id="hero" 
-      className="relative min-h-screen flex items-center justify-center overflow-hidden"
-      style={{
-        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)), url(${heroBg})`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-      }}
+    <section
+      id="hero"
+      className="relative h-[calc(100vh-1px)] pt-20 flex items-center justify-center overflow-hidden"
     >
-      {/* Animated background elements */}
-      <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-accent/10"></div>
-      
+      {/* Background video */}
+      <video
+        src={heroBg}
+        autoPlay
+        loop
+        muted
+        playsInline
+        className="absolute inset-0 w-full h-full object-cover"
+      />
+
+      {/* Overlay escuro */}
+      <div className="absolute inset-0 bg-black/80"></div>
+
       <div className="container mx-auto px-4 text-center relative z-10">
         {/* Main Heading */}
         <h1 className="text-5xl md:text-7xl font-bold mb-6 animate-fade-in">
@@ -36,22 +40,17 @@ const Hero = () => {
 
         {/* CTA Buttons */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
-          <Button 
+          <button 
             onClick={scrollToPlanos}
-            size="lg" 
-            className="btn-neon text-lg px-8 py-4 animate-float"
+            className="btn-neon text-lg px-8 py-4 animate-float flex items-center"
           >
             Ver Planos
             <ArrowDown className="ml-2 h-5 w-5" />
-          </Button>
-          
-          <Button 
-            variant="outline" 
-            size="lg" 
-            className="btn-outline-neon text-lg px-8 py-4"
-          >
+          </button>
+
+          <button className="btn-outline-neon text-lg px-8 py-4">
             Fale Conosco
-          </Button>
+          </button>
         </div>
 
         {/* Stats */}
@@ -72,7 +71,7 @@ const Hero = () => {
       </div>
 
       {/* Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce z-10">
         <ArrowDown className="h-6 w-6 text-primary" />
       </div>
     </section>
