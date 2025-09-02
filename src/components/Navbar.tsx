@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
+import logo from "../assets/logo.png"; // Importação da logo com o caminho correto
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -40,7 +41,7 @@ const Navbar = () => {
             onClick={() => scrollToSection("hero")}
           >
             <img 
-              src="/src/assets/logo.png"
+              src={logo} // Usando a variável importada
               alt="Performance Agency Logo"
               className="h-10 md:h-12 w-auto transition-all duration-300 hover:scale-105"
             />
