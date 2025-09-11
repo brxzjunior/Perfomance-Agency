@@ -1,5 +1,6 @@
 import { ArrowDown } from "lucide-react";
 import heroBg from "@/assets/hero-marketing.mov";
+import { MousePointer, TrendingUp, DollarSign } from "lucide-react";
 
 const Hero = () => {
   const scrollToPlanos = () => {
@@ -27,15 +28,29 @@ const Hero = () => {
 
       <div className="container mx-auto px-4 text-center relative z-10">
         {/* Main Heading */}
-        <h1 className="text-5xl md:text-7xl font-bold mb-6 animate-fade-in">
-          <span className="text-ice">Aumente as conversões no seu </span>
-          <span className="text-glow animate-glow"> negócio</span>
-        </h1>
+  
+      <h1 className="text-5xl md:text-7xl font-bold mb-6 animate-fade-in text-center flex flex-wrap justify-center gap-3">
+        <span className="text-ice">Transforme</span>
+
+        <span className="text-glow animate-glow flex items-center gap-2 transition-transform duration-300 hover:scale-110 hover:text-green-400 hover:drop-shadow-[0_0_15px_rgba(34,197,94,0.8)] cursor-pointer">
+          cliques
+          <TrendingUp className="w-6 h-6 md:w-8 md:h-8 text-success animate-bounce" />
+        </span>
+
+        <span className="text-ice">em</span>
+
+        <span className="text-glow animate-glow flex items-center gap-2 transition-transform duration-300 hover:scale-110 hover:text-green-400 hover:drop-shadow-[0_0_15px_rgba(34,197,94,0.8)] cursor-pointer">
+          vendas
+          <DollarSign className="w-6 h-6 md:w-8 md:h-8 text-success animate-pulse" />
+        </span>
+      </h1>
+
+
+
 
         {/* Subtitle */}
         <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-3xl mx-auto animate-fade-in">
-          Somos especialistas em impulsionar negócios através de estratégias de marketing digital 
-          inovadoras e resultados mensuráveis.
+          Otimize sua estratégia digital e aumente suas conversões com soluções inteligentes
         </p>
 
         {/* CTA Buttons */}
