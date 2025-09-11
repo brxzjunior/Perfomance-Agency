@@ -1,4 +1,5 @@
 import { Facebook, Instagram, Linkedin, Twitter, Mail, Phone, MapPin } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   const quickLinks = [
@@ -19,11 +20,12 @@ const Footer = () => {
   ];
 
   const legalLinks = [
-    { name: "Política de Privacidade", href: "#" },
-    { name: "Termos de Uso", href: "#" },
-    { name: "Política de Cookies", href: "#" },
-    { name: "LGPD", href: "#" }
+    { name: "Política de Privacidade", href: "/politica" },
+    { name: "Termos de Uso", href: "/termos" },
+    { name: "Política de Cookies", href: "/cookies" },
+    { name: "LGPD", href: "/lgpd" }
   ];
+
 
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id.replace("#", ""));
@@ -41,7 +43,7 @@ const Footer = () => {
             <div>
               <h3 className="text-2xl font-bold text-glow mb-4">Performance Agency</h3>
               <p className="text-muted-foreground leading-relaxed">
-                Transformando negócios através de estratégias digitais inovadoras e resultados mensuráveis há mais de 5 anos.
+                Transformando negócios através de estratégias digitais inovadoras e resultados mensuráveis com foco total.
               </p>
             </div>
 
@@ -49,7 +51,7 @@ const Footer = () => {
             <div className="space-y-3">
               <div className="flex items-center space-x-3">
                 <Phone className="h-5 w-5 text-primary" />
-                <span className="text-muted-foreground">(11) 9999-9999</span>
+                <span className="text-muted-foreground">(93) 9999-9999</span>
               </div>
               <div className="flex items-center space-x-3">
                 <Mail className="h-5 w-5 text-primary" />
@@ -57,7 +59,7 @@ const Footer = () => {
               </div>
               <div className="flex items-center space-x-3">
                 <MapPin className="h-5 w-5 text-primary" />
-                <span className="text-muted-foreground">São Paulo, SP - Brasil</span>
+                <span className="text-muted-foreground">Santarém, Pará - Brasil</span>
               </div>
             </div>
           </div>
